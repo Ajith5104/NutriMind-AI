@@ -37,11 +37,11 @@ const Login = () => {
                 
                 <form onSubmit={submitHandler}>
                     <div className="mb-3">
-                        <label className="form-label text-secondary">Mobile No or Email address</label>
+                        <label className="form-label text-secondary">Mobile Number or Email</label>
                         <input 
                             type="text" 
                             className="modern-input" 
-                            placeholder="Mobile No or Email address"
+                            placeholder="Mobile Number or Email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
