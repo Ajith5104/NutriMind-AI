@@ -100,18 +100,18 @@ const DietDashboard = () => {
 
     return (
         <div className="fade-in">
-            <div className="d-flex justify-content-between align-items-center mb-5 flex-wrap gap-3">
-                <div>
-                    <h2 className="mb-1">NutriMind <span className="gradient-text">Dashboard</span></h2>
+            <div className="d-flex justify-content-between align-items-center mb-4 mb-md-5 flex-wrap gap-3">
+                <div className="text-center text-sm-start w-100 w-sm-auto">
+                    <h2 className="mb-1" style={{ fontSize: 'clamp(1.5rem, 4vw, 2rem)' }}>NutriMind <span className="gradient-text">Dashboard</span></h2>
                     <p className="text-secondary small mb-0">Your professional AI-driven nutritional guidance</p>
                 </div>
-                <div className="d-flex gap-2">
-                    <button className="modern-btn px-4" onClick={generateNewPlan} disabled={generating}>
+                <div className="d-flex gap-2 w-100 w-sm-auto justify-content-center">
+                    <button className="modern-btn px-3 px-md-4 flex-grow-1 flex-sm-grow-0" onClick={generateNewPlan} disabled={generating}>
                         {generating ? 'Crafting Plan...' : 'Generate New Plan'}
                     </button>
                     {latestPlan && (
                         <button className="modern-btn-outline modern-btn" onClick={downloadPDF} style={{ color: 'var(--accent-primary)', background: 'transparent' }}>
-                            <span className="me-2">PDF</span>
+                            <span className="px-2">PDF</span>
                         </button>
                     )}
                 </div>
@@ -143,8 +143,8 @@ const DietDashboard = () => {
                 <div ref={planRef} ref-id="diet-plan-content">
                     {/* Header Summary */}
                     <div className="glass-panel p-4 mb-4 shadow-sm border-0">
-                        <div className="row align-items-center">
-                            <div className="col-lg-4 mb-4 mb-lg-0 text-center text-lg-start">
+                        <div className="row align-items-center g-4">
+                            <div className="col-lg-4 text-center text-lg-start">
                                 <h4 className="mb-1 text-glow">{user.name}'s Professional Plan</h4>
                                 <p className="text-secondary mb-0 small">Focus: <span className="text-primary fw-bold text-uppercase">{latestPlan.goal}</span></p>
                                 <div className="mt-3 d-flex justify-content-center justify-content-lg-start gap-2">
@@ -153,16 +153,16 @@ const DietDashboard = () => {
                                 </div>
                             </div>
                             <div className="col-lg-8">
-                                <div className="row g-3">
+                                <div className="row g-2 g-md-3">
                                     {[
                                         { label: 'PROTEIN', val: latestPlan.macroDistribution?.protein, class: 'macro-protein' },
                                         { label: 'CARBS', val: latestPlan.macroDistribution?.carbs, class: 'macro-carbs' },
                                         { label: 'FATS', val: latestPlan.macroDistribution?.fats, class: 'macro-fats' }
                                     ].map((m, i) => (
-                                        <div className="col-md-4" key={i}>
-                                            <div className={`macro-card ${m.class}`}>
-                                                <div className="text-secondary small fw-bold mb-1">{m.label}</div>
-                                                <div className="h5 mb-0 fw-bold">{m.val}</div>
+                                        <div className="col-4 col-sm-4" key={i}>
+                                            <div className={`macro-card ${m.class} p-2 p-md-3 h-100`}>
+                                                <div className="text-secondary x-small fw-bold mb-1">{m.label}</div>
+                                                <div className="h6 mb-0 fw-bold">{m.val}</div>
                                             </div>
                                         </div>
                                     ))}

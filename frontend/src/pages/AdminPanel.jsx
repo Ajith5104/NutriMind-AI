@@ -35,17 +35,17 @@ const AdminPanel = () => {
         <div className="fade-in">
             <h2 className="mb-4">Admin <span className="gradient-text">Dashboard</span></h2>
             
-            <div className="row g-4 mb-5">
+            <div className="row g-3 g-md-4 mb-4 mb-md-5">
                 <div className="col-md-6">
-                    <div className="glass-panel text-center p-4">
-                        <h3 className="text-secondary mb-2">Total Users</h3>
-                        <p className="display-4 fw-bold text-primary mb-0">{users.length}</p>
+                    <div className="glass-panel text-center p-3 p-md-4">
+                        <h3 className="text-secondary mb-2" style={{ fontSize: '1.25rem' }}>Total Users</h3>
+                        <p className="fw-bold text-primary mb-0" style={{ fontSize: 'clamp(2rem, 8vw, 3.5rem)' }}>{users.length}</p>
                     </div>
                 </div>
                 <div className="col-md-6">
-                    <div className="glass-panel text-center p-4">
-                        <h3 className="text-secondary mb-2">Diet Plans Generated</h3>
-                        <p className="display-4 fw-bold text-success mb-0">{diets.length}</p>
+                    <div className="glass-panel text-center p-3 p-md-4">
+                        <h3 className="text-secondary mb-2" style={{ fontSize: '1.25rem' }}>Plans Generated</h3>
+                        <p className="fw-bold text-success mb-0" style={{ fontSize: 'clamp(2rem, 8vw, 3.5rem)' }}>{diets.length}</p>
                     </div>
                 </div>
             </div>

@@ -45,7 +45,7 @@ const Calculators = () => {
 
     return (
         <div className="fade-in">
-            <h2 className="text-center mb-5"><span className="gradient-text">Fitness Calculators</span></h2>
+            <h2 className="text-center mb-4 mb-md-5" style={{ fontSize: 'clamp(1.5rem, 5vw, 2.5rem)' }}><span className="gradient-text">Fitness Calculators</span></h2>
             
             <div className="row g-4">
                 <div className="col-lg-6">

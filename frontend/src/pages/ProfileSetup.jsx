@@ -66,9 +66,9 @@ const ProfileSetup = () => {
         <div className="fade-in py-5 min-vh-100 d-flex align-items-center">
             <div className="container" style={{ maxWidth: '800px' }}>
                 <div className="setup-card">
-                    <div className="text-center mb-5">
-                        <h2 className="text-glow mb-2">Personalize Your Plan</h2>
-                        <p className="text-secondary">Step {step} of 3 — {step === 1 ? 'Core Metrics' : step === 2 ? 'Goals & Activity' : 'Diet & Health'}</p>
+                    <div className="text-center mb-4 mb-md-5">
+                        <h2 className="text-glow mb-2" style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)' }}>Personalize Your Plan</h2>
+                        <p className="text-secondary small mb-0">Step {step} of 3 — <span className="d-none d-sm-inline">{step === 1 ? 'Core Metrics' : step === 2 ? 'Goals & Activity' : 'Diet & Health'}</span></p>
                         
                         <div className="step-indicator">
                             <div className={`step-dot ${step >= 1 ? 'active' : ''}`}></div>
