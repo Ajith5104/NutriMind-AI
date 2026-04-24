@@ -4,7 +4,7 @@ NutriMind-AI is a comprehensive, AI-powered health and nutrition management plat
 
 ---
 
-## 🌐 Live Demo: https://nutri-mind-ai-j4pi.vercel.app
+## 🌐 Live Demo: https://nutri-mind-ai-ojhd.vercel.app
 
 ## ✨ Key Features
 
